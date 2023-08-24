@@ -45,11 +45,11 @@ jobs:
         echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem
         chmod 600 key.pem
     - name: pull docker image
-      run: ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.151.212.101 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/lainforge-home:latest:latest'
+      run: ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/lainforge-home:latest:latest'
     - name: stop the running container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.151.212.101 'sudo docker stop lainforge-home || true'
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.151.212.101 'sudo docker rm lainforge-home || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker stop lainforge-home || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker rm lainforge-home || true'
     - name: run the new container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@54.151.212.101 'sudo docker run -d --name ics-dev -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/lainforge-home:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker run -d --name ics-dev -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/lainforge-home:latest'
