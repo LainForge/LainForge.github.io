@@ -12,7 +12,7 @@ const sortedProjects = getSortedProjects(projects);
 
 const totalPages = getPageNumbers(sortedProjects.length);
 
-const paginatedProjects = sortedProjects.slice(0, SITE.projectPerPage);
+const paginatedProjects = sortedProjects.slice(0, SITE.projectsPerPage);
 ---
 
 <Projects
