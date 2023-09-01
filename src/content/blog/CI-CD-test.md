@@ -1,7 +1,7 @@
 ---
 title: CI-CD Pipeline Test
 pubDatetime: 2023-08-24T15:22:00Z
-projectSlug: testing-github-actions-CI-CD
+postSlug: testing-github-actions-CI-CD
 featured: true
 draft: false
 tags:
