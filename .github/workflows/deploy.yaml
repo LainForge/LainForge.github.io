@@ -46,7 +46,7 @@ jobs:
         chmod 600 key.pem
     - name: pull docker image
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull taru122/lainforge-home:latest:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull taru122/lainforge-home:latest'
     - name: run the new container
       run: |
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker run -d --name ics-dev -p 80:80 taru122/lainforge-home:latest'
