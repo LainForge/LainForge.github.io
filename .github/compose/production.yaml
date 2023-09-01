@@ -2,7 +2,7 @@ version: '3'
 
 services:
   lainforge:
-    image: taru122/lainforge-home:latest
+    image: rohansinghagent/lainforge-home:latest
     container_name: lainforge-container
     ports:
       - 80:80
