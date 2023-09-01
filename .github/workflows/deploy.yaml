@@ -44,9 +44,16 @@ jobs:
       run: |
         echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem
         chmod 600 key.pem
-    - name: pull docker image
+    - name: Download new docker compose file
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull rohansinghagent/lainforge-home:latest'
-    - name: run the new container
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'curl -LJO https://github.com/LainForge/LainForge.github.io/raw/main/.github/compose/production.yaml'
+    
+    - name: Bring down already running docker containers
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker run -d --name ics-dev -p 80:80 rohansinghagent/lainforge-home:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker kill $(docker ps -q)'
+    - name: Delete old images
+      run: |
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker rm $(docker ps -aq --filter  status="exited")'
+    - name: Restart using docker compose
+      run: |
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker-compose up -d -f production.yaml'
