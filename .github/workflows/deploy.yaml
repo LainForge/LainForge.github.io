@@ -56,4 +56,4 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker rm $(docker ps -aq --filter  status="exited")'
     - name: Restart using docker compose
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker-compose up -d -f production.yaml'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'docker-compose -f production.yaml up -d'
