@@ -27,7 +27,7 @@ jobs:
           context: ./
           push: true
           dockerfile: ./Dockerfile
-          tags: taru122/lainforge-home:latest
+          tags: rohansinghagent/lainforge-home:latest
   
   deploy:
     needs: build
@@ -38,7 +38,7 @@ jobs:
     - name: log in to docker hub
       uses: docker/login-action@v1
       with:
-          username: taru122
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: set permissions for private-key
       run: |
@@ -46,7 +46,7 @@ jobs:
         chmod 600 key.pem
     - name: pull docker image
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull taru122/lainforge-home:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker pull rohansinghagent/lainforge-home:latest'
     - name: run the new container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker run -d --name ics-dev -p 80:80 taru122/lainforge-home:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@18.140.65.193 'sudo docker run -d --name ics-dev -p 80:80 rohansinghagent/lainforge-home:latest'
