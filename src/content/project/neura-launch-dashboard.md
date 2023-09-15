@@ -17,14 +17,14 @@ Imagine this: After spending more than 6 months alone, drinking 10 cups of coffe
 
 And now you want to earn some money from it.
 
-But you don't know how to host/manage ML models in cloud 😞 so now...
+But you don't know how to host/manage ML models in cloud 😞 soo...
 
 You have two options - 
 
 - Either you go and learn devOps and all other ML model hosting related stuff and waste another 6 months of your life.
 - Or you type `neura-launch push` and get API endpoints to interact with your ML model that is magically hosted in cloud for you.
 
-Now considering you are a **sane** person, I'm sure you'd want to go with the second option. (?)
+Considering you are a **sane** person, I'm sure you'd want to go with the second option. (?)
 
 So in the rest of the article I'm going to tell you how **Neura Launch** can help you _host and manage your machine learning models_ as if they are some frontend websites!!! 
 
