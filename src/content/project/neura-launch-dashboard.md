@@ -13,11 +13,13 @@ description:
 
 # Introduction
 
-Imagine this: After spending more than 6 months alone, drinking 10 cups of coffee everyday inside of your small room, glued to your computer screen, you've birthed a ML model that can write flawless code and is wayyyyy better than GPT4.
+Imagine this: After spending more than 6 months alone, drinking 10 cups of coffee everyday inside of your small room, glued to your computer screen, you've birthed a ML model that can write flawless code and is wayyyyy better than GPT4. 
 
-But you don't know how to make it available for others to use because you have never dealt with devOps, model hosting, making APIs etc. etc. So it's basically useless work <3
+And now you want to earn some money from it.
 
-Now you have two options - 
+But you don't know how to host/manage ML models in cloud 😞 so now...
+
+You have two options - 
 
 - Either you go and learn devOps and all other ML model hosting related stuff and waste another 6 months of your life.
 - Or you type `neura-launch push` and get API endpoints to interact with your ML model that is magically hosted in cloud for you.
