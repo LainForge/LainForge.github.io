@@ -1,7 +1,7 @@
 ---
 title: From Code to Cloud in Minutes - Neura Launch
 pubDatetime: 2023-08-24T15:22:00Z
-projectSlug: launch-ml-models-like-websites
+postSlug: launch-ml-models-like-websites
 featured: true
 draft: false
 tags:
@@ -9,6 +9,8 @@ tags:
 ogImage: ""
 description:
   Neura Launch Is Your One-Stop Solution for Hassle-Free ML Model Deployment.
+category: project
+projectTitle: "Neura Launch"
 ---
 
 # Introduction
