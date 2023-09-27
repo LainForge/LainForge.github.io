@@ -61,20 +61,24 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
 
     <section id="recent-posts">
       <h2>Recent Posts</h2>
-      <ul>
-        {
-          sortedPosts.map(
-            ({ data }, index) =>
-              index < 4 && (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              )
-          )
+   <ul>
+    { 
+      sortedPosts.reduce((acc, { data }) => {
+        // Check if the post meets the conditions (not in the "project" category)
+        if (acc.length < 2 && data.category !== "project") {
+          acc.push(
+            <Card
+              key={acc.length} // Make sure to add a unique key
+              href={`/posts/${slugify(data)}`}
+              frontmatter={data}
+              secHeading={false}
+            />
+          );
         }
-      </ul>
+        return acc;
+      }, [])
+    }
+  </ul>
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/posts">
           All Posts

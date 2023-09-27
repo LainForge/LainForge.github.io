@@ -12,6 +12,8 @@ export const blogSchema = z
     ogImage: z.string().optional(),
     description: z.string(),
     canonicalURL: z.string().optional(),
+    category: z.string().default('blog'),
+    projectTitle: z.string().default('none')
   })
   .strict();
 

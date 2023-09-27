@@ -1,15 +1,14 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import Projects from "@layouts/Projects.astro";
-import ProjectDetails from "@layouts/ProjectDetails.astro";
-import getSortedProjects from "@utils/getSortedProjects";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Card from "@components/Card";
+import Footer from "@components/Footer.astro";
 import getPageNumbers from "@utils/getPageNumbers";
 import slugify from "@utils/slugify";
 import { SITE } from "@config";
-
-export interface Props {
-  project: CollectionEntry<"project">;
-}
+import getSortedPosts from "@utils/getSortedPosts";
 
 export async function getStaticPaths() {
   const projects = await getCollection("project", ({ data }) => !data.draft);
@@ -26,33 +25,39 @@ export async function getStaticPaths() {
   return [...projectResult, ...pagePaths];
 }
 
-const { slug } = Astro.params;
 const { project } = Astro.props;
 
-const projects = await getCollection("project");
+const blogs = await getCollection("blog");
 
-const sortedProjects = getSortedProjects(projects);
+let sortedDevlogs = getSortedPosts(blogs);
+sortedDevlogs =  sortedDevlogs
+          .filter(({ data }) => data.projectTitle == project.data.title)
 
-const totalPages = getPageNumbers(sortedProjects.length);
-
-const currentPage =
-  slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
-    ? Number(slug)
-    : 0;
-const lastProject = currentPage * SITE.projectsPerPage;
-const startProject = lastProject - SITE.projectsPerPage;
-
-const paginatedProjects = sortedProjects.slice(startProject, lastProject);
 ---
 
-{
-  project ? (
-    <ProjectDetails project={project} />
-  ) : (
-    <Projects
-      projects={paginatedProjects}
-      pageNum={currentPage}
-      totalPages={totalPages.length}
-    />
-  )
-}
+<Layout title={`Devlogs | ${SITE.title}`}>
+  <Header activeNav="projects" />
+  <Main pageTitle="Devlogs" pageDesc="Follow the development process of Neura-Launch.">
+    <ul>
+      {
+        sortedDevlogs
+          .map(({ data }) => (
+            <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .pagination-wrapper {
+    @apply mb-8 mt-auto flex justify-center;
+  }
+  .disabled {
+    @apply pointer-events-none select-none opacity-50 hover:text-skin-base group-hover:fill-skin-base;
+  }
+  .disabled-svg {
+    @apply group-hover:!fill-skin-base;
+  }
+</style>
