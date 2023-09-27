@@ -205,6 +205,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "project": {
+"neura-launch copy.md": {
+	id: "neura-launch copy.md";
+  slug: "neura-launch-copy";
+  body: string;
+  collection: "project";
+  data: InferEntrySchema<"project">
+} & { render(): Render[".md"] };
 "neura-launch.md": {
 	id: "neura-launch.md";
   slug: "neura-launch";

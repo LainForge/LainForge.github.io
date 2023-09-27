@@ -1,28 +1,23 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Card from "@components/Card";
 import Footer from "@components/Footer.astro";
 import getPageNumbers from "@utils/getPageNumbers";
-import slugify from "@utils/slugify";
+import slugify, { slugifyProject } from "@utils/slugify";
 import { SITE } from "@config";
 import getSortedPosts from "@utils/getSortedPosts";
 
 export async function getStaticPaths() {
   const projects = await getCollection("project", ({ data }) => !data.draft);
-
   const projectResult = projects.map(project => ({
-    params: { slug: slugify(project.data) },
+    params: { slug: slugifyProject(project.data) },
     props: { project },
   }));
 
-  const pagePaths = getPageNumbers(projects.length).map(pageNum => ({
-    params: { slug: String(pageNum) },
-  }));
-
-  return [...projectResult, ...pagePaths];
+  return [...projectResult];
 }
 
 const { project } = Astro.props;
@@ -37,7 +32,7 @@ sortedDevlogs =  sortedDevlogs
 
 <Layout title={`Devlogs | ${SITE.title}`}>
   <Header activeNav="projects" />
-  <Main pageTitle="Devlogs" pageDesc="Follow the development process of Neura-Launch.">
+  <Main pageTitle="Devlogs" pageDesc={`Follow the development process of ${project.data.title}`}>
     <ul>
       {
         sortedDevlogs

@@ -1,7 +1,7 @@
 ---
 title: Neura Launch
 pubDatetime: 2023-08-24T15:22:00Z
-projectSlug: launch-ml-models-like-websites
+projectSlug: Neura Launch
 featured: true
 draft: false
 tags:

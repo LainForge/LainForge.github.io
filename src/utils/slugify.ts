@@ -1,10 +1,13 @@
 import { slug as slugger } from "github-slugger";
-import type { BlogFrontmatter } from "@content/_schemas";
+import type { BlogFrontmatter, ProjectFrontMatter } from "@content/_schemas";
 
 export const slugifyStr = (str: string) => slugger(str);
 
 const slugify = (post: BlogFrontmatter) =>
   post.postSlug ? slugger(post.postSlug) : slugger(post.title);
+
+export const slugifyProject = (project: ProjectFrontMatter) =>
+  project.projectSlug ? slugger(project.projectSlug) : slugger(project.title);
 
 export const slugifyAll = (arr: string[]) => arr.map(str => slugifyStr(str));
 
