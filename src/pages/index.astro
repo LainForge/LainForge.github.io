@@ -6,9 +6,10 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
+import ProjectCard from "@components/ProjectCard";
 import getSortedPosts from "@utils/getSortedPosts";
 import getSortedProjects from "@utils/getSortedProjects";
-import slugify from "@utils/slugify";
+import slugify, { slugifyProject } from "@utils/slugify";
 
 const posts = await getCollection("blog");
 const projects = await getCollection("project");
@@ -46,8 +47,8 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
             <h2>Featured Projects</h2>
             <ul>
               {featuredProjects.map(({ data }) => (
-                <Card
-                  href={`/projects/${slugify(data)}`}
+                <ProjectCard
+                  href={`/projects/${slugifyProject(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -68,7 +69,6 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
         if (acc.length < 2 && data.category !== "project") {
           acc.push(
             <Card
-              key={acc.length} // Make sure to add a unique key
               href={`/posts/${slugify(data)}`}
               frontmatter={data}
               secHeading={false}

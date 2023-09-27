@@ -31,4 +31,4 @@ export const projectSchema = z.object({
 });
 
 export type BlogFrontmatter = z.infer<typeof blogSchema>;
-export type Project = z.infer<typeof projectSchema>;
+export type ProjectFrontMatter = z.infer<typeof projectSchema>;
