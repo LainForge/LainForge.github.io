@@ -189,6 +189,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"hacktoberfest.md": {
+	id: "hacktoberfest.md";
+  slug: "hacktoberfest";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "neura-launch/about-neura-launch.md": {
 	id: "neura-launch/about-neura-launch.md";
   slug: "neura-launch/about-neura-launch";
@@ -205,13 +212,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "project": {
-"neura-launch copy.md": {
-	id: "neura-launch copy.md";
-  slug: "neura-launch-copy";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
 "neura-launch.md": {
 	id: "neura-launch.md";
   slug: "neura-launch";
