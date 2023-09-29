@@ -1,7 +1,7 @@
 ---
 author: Tarun Tomar
 pubDatetime: 2023-09-29T15:22:00Z
-title: Why should you participate in Hacktoberfest 2023?
+title: Why should you participate in Hacktoberfest 2023
 postSlug: about-hacktoberfest
 featured: true
 draft: false
