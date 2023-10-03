@@ -20,18 +20,10 @@ RUN rm -rf ./*
 
 COPY --from=build /app/dist .
 
-# Install Certbot and its dependencies
-RUN apk add --no-cache certbot certbot-nginx
-
-# Copy a custom Nginx configuration file (if needed)
-# COPY nginx.conf /etc/nginx/nginx.conf
-
-# Expose ports 80 and 443
 EXPOSE 80
 EXPOSE 443
 
-# Entry point script to obtain and renew the SSL certificate
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
 
+ENTRYPOINT ["/entrypoint.sh"]
