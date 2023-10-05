@@ -81,12 +81,6 @@ If you've gotten this far, then you can continue on with the next section on "Ge
     git add path/to/filename.ext
     ```
 
-    You can also add all unstaged files using:
-
-    ```shell
-    git add .
-    ```
-
     **Note:** using a `git add .` will automatically add all files. You can do a
     `git status` to see your changes, but do it **before** `git add`.
 
