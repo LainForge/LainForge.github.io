@@ -25,20 +25,14 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
     <section id="hero">
       <h1>Kon'nichiwa​ 🙇🏻</h1>
       <p>
-        LainForge is literally the best Open Source Organization in the World!
+        At LainForge,
       </p>
-      <p>
-        Checkout our projects or
-        <LinkButton
-          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="/about"
-        >
-          ABOUT
-        </LinkButton> for more info.
-      </p>
+      <ul>
+        <li class="my-3">1. We solve <a href="/projects" class="underline-links">problems</a></li>
+        <li class="my-3">2. We write about <a href="/posts" class="underline-links">solving problems</a> </li>
+      </ul>
+      <p>Scroll down for more ⬇️</p>
     </section>
-
-    <Hr />
 
     {
       featuredProjects.length > 0 && (
@@ -130,5 +124,9 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+
+  .underline-links {
+    @apply underline decoration-wavy decoration-1 underline-offset-4;
   }
 </style>
