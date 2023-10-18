@@ -1,6 +1,6 @@
 # About Lainforge​ 
 
-We are a smol group of enthusiastic developers who love to code and learn new things.
+We are a small group of enthusiastic developers who love to code and explore new tech.
 All of our projects are open source and can be found [here](https://github.com/LainForge).
 
 ## Lainforge.github.io
