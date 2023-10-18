@@ -196,16 +196,16 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"neura-launch/about-neura-launch.md": {
-	id: "neura-launch/about-neura-launch.md";
-  slug: "neura-launch/about-neura-launch";
+"neura-launch/about-neura-launch-cli.md": {
+	id: "neura-launch/about-neura-launch-cli.md";
+  slug: "neura-launch/about-neura-launch-cli";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"why-lainforge.md": {
-	id: "why-lainforge.md";
-  slug: "why-lainforge";
+"neura-launch/about-neura-launch.md": {
+	id: "neura-launch/about-neura-launch.md";
+  slug: "neura-launch/about-neura-launch";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
