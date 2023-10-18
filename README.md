@@ -3,9 +3,9 @@
 We are a small group of enthusiastic developers who love to code and explore new tech.
 All of our projects are open source and can be found [here](https://github.com/LainForge).
 
-## Lainforge.github.io
+## Visit our Website!
 
-This is our [website](https://lainforge.org/). It is built with [Astro](https://astro.build/)
+You can find us on our [website](https://lainforge.org/). It is built with [Astro](https://astro.build/)
 
 Main features of this website are:
 
