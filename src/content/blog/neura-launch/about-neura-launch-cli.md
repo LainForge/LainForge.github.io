@@ -7,8 +7,7 @@ draft: false
 tags:
   - machine learning, devops, python, cli
 ogImage: ""
-description:
-  Neura Launch CLI tool allows you to publish your machine learning models to the cloud using a single command.
+description: Neura Launch CLI tool allows you to publish your machine learning models to the cloud using a single command.
 category: project
 projectTitle: "Neura Launch"
 ---
@@ -53,7 +52,7 @@ First, let's figure out the requirements. We want our CLI tool to do the followi
 
 ### Initialize the project
 
-Initializing a project is simply adding a `inference.py` and `config.yaml` file to the root directory of the project. The `inference.py` file will contain the code that will be used to make predictions using the model. The `config.yaml` file will contain all the information about the project and the model that we want to publish to the cloud.  
+Initializing a project is simply adding a `inference.py` and `config.yaml` file to the root directory of the project. The `inference.py` file will contain the code that will be used to make predictions using the model. The `config.yaml` file will contain all the information about the project and the model that we want to publish to the cloud.
 
 For this we will use the `init` command that will run the following code:
 
@@ -94,7 +93,7 @@ As you can see in the code above, we are simply copying the `inference.py` file 
 
 ### Add project token
 
-Next up, we want to add the project token. For this we will use the `add_token` command. 
+Next up, we want to add the project token. For this we will use the `add_token` command.
 Here I had a long discussion with my team about two things:
 
 - If we should hide the project token when the user is typing it in the terminal or not.
@@ -117,9 +116,9 @@ import keyring
 keyring.set_password("neura-launch", "project-token", token)
 ```
 
-Let's take a step back and talk about why it was necessary for us to use keyring to store the project token. 
+Let's take a step back and talk about why it was necessary for us to use keyring to store the project token.
 
-Suppose our user is working on a project with multiple collaborators. Now if we store the project token in the `config.yaml` file, then the project token will be visible to all the collaborators. This is a security concern because anyone with the project token can push the project to the cloud. 
+Suppose our user is working on a project with multiple collaborators. Now if we store the project token in the `config.yaml` file, then the project token will be visible to all the collaborators. This is a security concern because anyone with the project token can push the project to the cloud.
 
 But since we are using keyring, only the user who has the project token stored in their system's keyring can push the project to the cloud. This introduces an extra layer of security to our project.
 
@@ -139,11 +138,11 @@ First of all we have to understand that we are going to use AWS to store the pro
 
 #### Why?
 
-Because S3 buckets are cheap and easy to use. They are also highly scalable and secure. 
+Because S3 buckets are cheap and easy to use. They are also highly scalable and secure.
 
 #### How?
 
-We wanted to abstract the process of pushing the project from the CLI tool. So we decided to send a POST request to the Neura Launch API with the project information. The API will then push the project to the S3 bucket and update the project information on the Neura Launch Dashboard.  
+We wanted to abstract the process of pushing the project from the CLI tool. So we decided to send a POST request to the Neura Launch API with the project information. The API will then push the project to the S3 bucket and update the project information on the Neura Launch Dashboard.
 
 There's one very important thing that we need to discuss here and that is `code validation`.
 
@@ -152,7 +151,6 @@ How do we know that the code that the user has on their local machine is the sam
 To solve this problem we generate a `checksum` of the zip file before pushing the code and then send that checksum to the `/upload` api which will then store the checksum in the database.
 
 This way our builder service can compare the checksum of the zip file that it generates with the checksum that is stored in the database. If the checksum matches, then the code is valid and the builder service can proceed with building the docker image.
-
 
 #### Back to the CLI tool
 
@@ -202,5 +200,3 @@ That's it. This is all the code that you need to write to push your project to t
 I know I haven't covered the `/upload` API in this devlog but I will cover it in the next devlog so stay tuned for that 😉.
 The code for the CLI tool is available on [Github](https://github.com/LainForge/neura-launch-cli).
 If you have any questions or suggestions, feel free to reach out to us on our [discord](https://discord.gg/UxGdN56meC)
-
-
