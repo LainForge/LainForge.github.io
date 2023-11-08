@@ -20,6 +20,8 @@ export const LOGO_IMAGE = {
   height: 46,
 };
 
+export const MODE = process.env.NODE_ENV || "development";
+
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
