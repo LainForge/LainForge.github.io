@@ -34,45 +34,26 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
       <p>Scroll down for more ⬇️</p>
     </section>
 
-    {
-      featuredProjects.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured Projects</h2>
-            <ul>
-              {featuredProjects.map(({ data }) => (
-                <ProjectCard
-                  href={`/projects/${slugifyProject(data)}`}
+    <Hr />
+
+    <section id="recent-posts">
+      <ul>
+        { 
+          sortedPosts.reduce((acc, { data }) => {
+            // Check if the post meets the conditions (not in the "project" category)
+            if (acc.length < 2 && data.category !== "project") {
+              acc.push(
+                <Card
+                  href={`/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
-
-    <section id="recent-posts">
-      <h2>Recent Posts</h2>
-   <ul>
-    { 
-      sortedPosts.reduce((acc, { data }) => {
-        // Check if the post meets the conditions (not in the "project" category)
-        if (acc.length < 2 && data.category !== "project") {
-          acc.push(
-            <Card
-              href={`/posts/${slugify(data)}`}
-              frontmatter={data}
-              secHeading={false}
-            />
-          );
+              );
+            }
+            return acc;
+          }, [])
         }
-        return acc;
-      }, [])
-    }
-  </ul>
+      </ul>
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/posts">
           All Posts
@@ -116,7 +97,7 @@ const featuredProjects = sortedProjects.filter(({ data }) => data.featured);
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
   #recent-posts {
-    @apply pb-6 pt-12;
+    @apply pb-2 pt-4;
   }
   #featured h2,
   #recent-posts h2 {
