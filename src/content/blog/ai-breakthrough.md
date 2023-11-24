@@ -21,7 +21,7 @@ But why are people suddenly talking about AGI and how is this related to the Ope
 
 ### How did we even get here?
 
-Back in 2013 Word2Vec was released, which was the first model that could understand natural language. It was a huge breakthrough in the field of NLP and it paved the way for many other models like BERT, GPT-3, etc.
+Back in 2013, Word2Vec was released, which was the first model that could understand natural language. It was a huge breakthrough in the field of NLP and it paved the way for many other models like BERT, GPT-3, etc.
 
 Word2Vec was trained on a huge corpus of text data and it learned the meaning of words by looking at the context in which they appear. For instance, it learned that the word "king" is related to the word "queen" because they both appear in the same context. 
 
@@ -39,30 +39,30 @@ Ok so now we know that we have models that can understand natural language and g
 
 Language and Vision are two of the very important aspects of human intelligence, but they're not the only ones. There's one more aspect that is as important if not more, and that is **Logical Reasoning**.
 
-And logical reasoning is closely related to the understanding of Mathematics.
+Logical reasoning is closely related to the understanding of Mathematics.
 
-ChatGPT is great at understanding natural language, but it can't do basic arithmetic. That's because it doesn't have the understanding of Mathematics.
+ChatGPT is great at understanding natural language, but it can't do basic arithmetic. That's because it doesn't have an understanding of Mathematics.
 
-When you ask it to add 2 and 2, it might give you the answer as 4 but it doesn't know why it's 4. It doesn't know the concept of addition. It's just memorized the answer from the training data. That's why it often gives wrong answers when you ask it some logical questions that involve numbers.
+When you ask it to add 2 and 2, it might give you the answer as 4 but it doesn't know why it's 4. It doesn't know the concept of addition. It's just memorizing the answer from the training data. That's why it often gives wrong answers when you ask it some logical questions that involve numbers.
 
 ### Math underpins everything
 
 Math is the language of the universe. It's the language of Physics, Chemistry, Biology, and every other field of science.
-We represent images as numbers, we represent sound as numbers, we represent text as numbers, and we represent everything else as numbers.Thus, it's not surprising that Math is the key to AGI.
+We represent images as numbers, we represent sound as numbers, we represent text as numbers, and we represent everything else as numbers. Thus, it's not surprising that Math is the key to AGI.
 
-> Once we have a model that can understand Math, we can then work on extending it's knowledge to understand logic, reasoning, planning and other aspects of human intelligence.
+> Once we have a model that can understand Math, we can then work on extending its knowledge to understand logic, reasoning, planning, and other aspects of human intelligence.
 
 2013's Word2Vec was a huge breakthrough in the field of NLP, but after so many years and so many advancements in the field of NLP, we couldn't make those models understand Math. Thus people started to think that maybe we need an entirely new approach, a new breakthrough algorithm that can help AI understand Math like humans do.
 
-But noone actively shared any new ideas or research papers on this topic (publicly at least). Noone said that they're investing in this area.
+But no one actively shared any new ideas or research papers on this topic (publicly at least). No one said that they're investing in this area.
 
-Until recently, when OpenAI fired its CEO and that led to a chain of events that made people wonder if OpenAI has made a breakthrough in AGI.
+Until recently, when OpenAI fired its CEO that led to a chain of events that made people wonder if OpenAI has made a breakthrough in AGI.
 
 ### The OpenAI Drama
 
-OpenAI is a non-profit AI research company founded Sam Altman. It is one of leading AI research companies in the world and it has made many breakthroughs in the field of AI with the development of it's GPT models.
+OpenAI is a non-profit AI research company founded by Sam Altman. It is one of the leading AI research companies in the world and it has made many breakthroughs in the field of AI with the development of its GPT models.
 
-On November 17, 2023, OpenAI made a public announcement through an official blog post the board memebers have decided to fire its CEO Sam Altman because 
+On November 17, 2023, OpenAI made a public announcement through an official blog post the board members had decided to fire its CEO Sam Altman because 
 
 > "he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities"
 
@@ -71,7 +71,7 @@ This was a huge shock to the AI community because Sam Altman was the one who fou
 Now this drama unfolded in a very interesting way.
 
 - Sam got hired by Microsoft the very next day after he was fired from OpenAI. 
-- OpenAI Staff threatened to quit unless Board resigns and Sam is reinstated as CEO.
+- OpenAI Staff threatened to quit unless the Board resigns and Sam is reinstated as CEO.
 - Interim CEO, Mira Murati, initiated questioning of the board members on their decision to fire Sam to which they didn't respond with a satisfactory answer.
 - OpenAI Board resigns and Sam is reinstated as CEO.
 
@@ -81,7 +81,7 @@ Sam Altman has been known to push rapid development in the field of AI and he ha
 
 However, the board members of OpenAI have been known to be more conservative and they have been known to be more focused on the safety aspect of AI.
 
-So when Sam was fired, people started to wonder if the board members have decided to take a more conservative approach and they have decided to slow down the development of AI possibly because they realised *Sam was getting too close to AGI.* And they didn't have any plans to safeguard the world from the potential dangers of AGI.
+So when Sam was fired, people started to wonder if the board members had decided to take a more conservative approach and they have decided to slow down the development of AI possibly because they realized *Sam was getting too close to AGI.* And they didn't have any plans to safeguard the world from the potential dangers of AGI.
 
 This became even more suspicious when the new CEO hired by the board members, Emmett Shear, was known to be a very conservative person and he was known to be very vocal about the dangers of AGI and how we should slow down the development of AI.
 
@@ -93,7 +93,7 @@ Let me introduce you to Jimmy Apples.
 
 ### Who the hell is Jimmy Apples?
 
-[Jimmy Apples](https://twitter.com/apples_jimmy) is a unknown entity on Twitter (X) who has been repeatedly proven to be predicting future events with 100% accuracy.
+[Jimmy Apples](https://twitter.com/apples_jimmy) is an unknown entity on Twitter (X) who has been repeatedly proven to be predicting future events with 100% accuracy.
 
 He made the following tweet on 18th September 2023.
 
@@ -114,15 +114,15 @@ Let me introduce you to what people are calling the [Q\* Model](https://www.busi
 
 ### The Q* Model 
 
-A couple of weeks ago, a new research paper was leaked on [4chan](https://www.4chan.org/index.php). The paper was titled "Q-Networks for partially observable Reinforcement learning" and it was written by a group of researchers at OpenAI.
+A couple of weeks ago, a new research paper was leaked on [4chan](https://www.4chan.org/index.php). The paper was titled "Q-Networks for Partially Observable Reinforcement learning" and it was written by a group of researchers at OpenAI.
 
-The paper was about a new algorithm that can be used to train AI agents to understand the basic mathematical concepts and even reason about them. The models then that are trained using this algorithm are called Q\* Models.
+The paper was about a new algorithm that can be used to train AI agents to understand basic mathematical concepts and even reason about them. The models that are trained using this algorithm are called Q\* Models.
 
-These models are suspected to have the capabilities to understand mathematics atleast as good as a high school student. 
+These models are suspected to have the capabilities to understand mathematics at least as well as a high school student. 
 
 Not only that, but these models are also really good at using the knowledge and learnings from one domain to solve problems in another domain. This is something that the current AI models are not good at.
 
-Now ofcs, this could all be a hoax, but last time a research paper was leaked on 4chan, it turned out to be true. The paper was about Meta's own LlamaNet.
+Now of course, this could all be a hoax, but last time a research paper was leaked on 4chan, it turned out to be true. The paper was about Meta's own LlamaNet.
 
 Alright, now before we get carried away, let's take a step back and look at the bigger picture by collecting all the pieces of the puzzle.
 
@@ -134,12 +134,12 @@ Alright, now before we get carried away, let's take a step back and look at the 
 - The new CEO hired by the board members is known to be very conservative.
 - Jimmy Apples predicted the firing of Sam Altman.
 - Jimmy Apples predicted that OpenAI has made a breakthrough in AGI.
-- A research paper was leaked on 4chan about a new algorithm that can be used to train AI agents to understand the basic mathematical concepts and even reason about them.
+- A research paper was leaked on 4chan about a new algorithm that can be used to train AI agents to understand basic mathematical concepts and even reason about them.
 
 
-Now, if you look at all these pieces of the puzzle together, it's very hard to believe that there's not suspicious activity going on at OpenAI. 
+Now, if you look at all these pieces of the puzzle together, it's very hard to believe that there's no suspicious activity going on at OpenAI. 
 
-Plus, one last thing that I forgot to mention is that OpenAI silently updated their vision statement on their website as follows.
+Plus, one last thing that I forgot to mention is that OpenAI silently updated its vision statement on its website as follows.
 
 ![Vision](/imgs/ai-breakthrough/vision.png)
 
@@ -147,7 +147,7 @@ Plus, one last thing that I forgot to mention is that OpenAI silently updated th
 
 Phew! That was a lot of information to take in. Let's take a moment to process all of this.
 
-Combining the Q\* Model, GPT-4 and DALL-E, we can see that we're getting closer and closer to AGI.
+Combining the Q\* Model, GPT-4, and DALL-E, we can see that we're getting closer and closer to AGI.
 
 > It seems like it will combine the two sides of the brain and be capable of knowing some things out of experience, while still being able to reason about facts.
 
@@ -157,7 +157,7 @@ It's hard to say when we'll reach AGI, but it seems like we're getting closer an
 
 "Are we ready for it?" is a question for another day and I'd leave that for the new OpenAI board members to think about.
 
-**Now ofcs this is all speculation and there's no concrete evidence to prove that OpenAI has made a breakthrough in AGI. We cannot be sure of it until OpenAI itself makes some annoucement.**
+**Now ofcs this is all speculation and there's no concrete evidence to prove that OpenAI has made a breakthrough in AGI. We cannot be sure of it until OpenAI itself makes some announcement.**
 
 ### References
 
