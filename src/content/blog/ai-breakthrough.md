@@ -1,7 +1,7 @@
 ---
 author: Tarun Tomar
 pubDatetime: 2023-11-24T15:22:00Z
-title: Are we closing in on Artificial General Intelligence?
+title: Are we closing in on Artificial General Intelligence
 postSlug: ai-breakthrough
 featured: true
 draft: false
