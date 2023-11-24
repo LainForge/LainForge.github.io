@@ -7,8 +7,8 @@ export const SITE: Site = {
   title: "LainForge",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
-  projectsPerPage: 3,
+  postPerPage: 5,
+  projectsPerPage: 5,
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
